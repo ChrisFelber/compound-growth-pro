@@ -1,1 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
+<title>Compound</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b0d12">
+
+</head>
+
+<body>
+
+<div class="app">
+
+<header class="top">
+    <div>
+        <h1>Compound</h1>
+        <p>Investment growth planner</p>
+    </div>
+
+    <button id="themeBtn" class="icon-btn">
+        ☾
+    </button>
+</header>
+
+
+<section class="hero card">
+
+    <p class="label">
+        Portfolio value
+    </p>
+
+    <h2 id="portfolioValue">
+        CHF 52'093
+    </h2>
+
+    <div class="gain">
+        +CHF 28'093 growth
+    </div>
+
+
+    <svg class="chart"
+         viewBox="0 0 400 160">
+
+        <defs>
+            <linearGradient id="area"
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="1">
+
+            <stop offset="0%"
+            stop-color="#22c55e"
+            stop-opacity=".35"/>
+
+            <stop offset="100%"
+            stop-color="#22c55e"
+            stop-opacity="0"/>
+
+            </linearGradient>
+        </defs>
+
+
+        <path id="chartArea"
+        fill="url(#area)"
+        d="
+        M0 140
+        L50 130
+        L100 110
+        L150 100
+        L200 70
+        L250 55
+        L300 35
+        L350 20
+        L400 10
+        L400 160
+        L0 160Z"/>
+
+
+        <path id="chartLine"
+        fill="none"
+        stroke="#22c55e"
+        stroke-width="4"
+        stroke-linecap="round"
+
+        d="
+        M0 140
+        L50 130
+        L100 110
+        L150 100
+        L200 70
+        L250 55
+        L300 35
+        L350 20
+        L400 10"/>
+
+    </svg>
+
+</section>
+
+
+
+<section class="stats">
+
+<div class="card stat">
+<p>Invested</p>
+<strong id="invested">
+CHF 24'000
+</strong>
+</div>
+
+
+<div class="card stat">
+<p>Growth</p>
+<strong class="green">
+CHF 28'093
+</strong>
+</div>
+
+
+</section>
+
+
+
+<section class="card calculator">
+
+<h3>Investment</h3>
+
+
+<label>
+Initial investment
+</label>
+
+<input id="initial"
+type="number"
+value="10000">
+
+
+<label>
+Monthly contribution
+</label>
+
+<input id="monthly"
+type="number"
+value="100">
+
+
+<label>
+Years
+</label>
+
+<input id="years"
+type="number"
+value="20">
+
+
+<label>
+Annual return %
+</label>
+
+<input id="return"
+type="number"
+value="7">
+
+
+</section>
+
+
+
+<section class="card goal">
+
+<h3>🎯 Goal Mode</h3>
+
+<p>
+Target amount
+</p>
+
+<input id="goal"
+type="number"
+value="1000000">
+
+
+<div class="progress">
+
+<div id="progressBar"></div>
+
+</div>
+
+
+<p id="goalText">
+0% completed
+</p>
+
+
+</section>
+
+
+
+<nav class="nav">
+
+<button class="active">
+📈 Growth
+</button>
+
+
+<button>
+🎯 Goal
+</button>
+
+
+<button>
+⚙️ Settings
+</button>
+
+</nav>
+
+
+</div>
+
+
+<script src="app.js"></script>
+
+
+</body>
+</html>
