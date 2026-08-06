@@ -312,3 +312,16 @@ document.body.classList.add("dark");
 loadData();
 
 calculate();
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener(
+    "load",
+    () => {
+
+        navigator.serviceWorker.register(
+        "service-worker.js"
+        );
+
+    });
+
+}
